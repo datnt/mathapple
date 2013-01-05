@@ -1,0 +1,2 @@
+module AppManagersHelper
+end
