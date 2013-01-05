@@ -57,4 +57,6 @@ Mathapple::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   resources :app_managers do
   end
+  resources :bai_taps do
+  end
 end
