@@ -21,10 +21,31 @@ class BaiTapsController < ApplicationController
     @cauhoi = PhepCong.new
   end
   def luu_cau_hoi
-    redirect_to cac_cau_hoi_bai_taps_path
+
+    @cauhoi = PhepCong.new(params[:phep_cong])
+    @cauhoi.loai_cau_hoi_id = 1
+
+    if @cauhoi.save
+      redirect_to cac_cau_hoi_bai_taps_path
+    end
   end
   def cac_cau_hoi
     
+  end
+  def bai_thi
+    @cauhoi = PhepCong.find(:all).first()
+  end
+  def luu_bai_thi
+    @cauhoi = PhepCong.find(params[:phep_cong][:id])
+    @thong_bao = ""
+
+    ketqua = params[:ket_qua_hs]
+
+    if ketqua.to_f == @cauhoi.ketqua
+      @thong_bao = "correct"
+    else
+      @thong_bao = "Sai"
+    end
   end
 
 end

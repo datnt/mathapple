@@ -1,0 +1,7 @@
+<%= form_for(@cauhoi,:url => luu_bai_thi_bai_taps_path , :html => {:multipart => false, :id => "cau_hoi_form", :style=>"" }, :method => :post) do |f| %>
+  ID: <%= f.text_field :id %><br/>
+  Số thứ nhất: <%= f.text_field :so_a %><br/>
+  Số thứ hai: <%= f.text_field :so_b %><br/>
+  Kết quả: <%= text_field_tag :ket_qua_hs  %><br/>
+  <%= f.submit 'Chấp Nhận' %>
+<% end %>
