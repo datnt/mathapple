@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  so_a: 9.99
+  so_b: 9.99
+  ketqua: 9.99
+
+two:
+  so_a: 9.99
+  so_b: 9.99
+  ketqua: 9.99

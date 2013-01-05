@@ -1,0 +1,2 @@
+class BaiKiemTrasController < ApplicationController
+end

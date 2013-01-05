@@ -58,6 +58,10 @@ Mathapple::Application.routes.draw do
   resources :app_managers do
   end
   resources :bai_taps do
+    collection do
+      get :cau_hoi, :cac_cau_hoi
+      post :luu_cau_hoi
+    end
   end
   resources :loai_cau_hois do
   end
