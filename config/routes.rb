@@ -59,4 +59,6 @@ Mathapple::Application.routes.draw do
   end
   resources :bai_taps do
   end
+  resources :loai_cau_hois do
+  end
 end

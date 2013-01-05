@@ -1,0 +1,5 @@
+<%= form_for(@phanloai, :html => { :multipart => false }) do |f| %>
+  Loại câu hỏi: <%= f.text_field :title %><br/>
+  Mô tả định dạng loại câu hỏi: <%= f.text_field :content %><br/>
+  <%= f.submit 'Khởi tạo' %>
+<% end %>
