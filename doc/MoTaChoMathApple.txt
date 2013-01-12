@@ -1,0 +1,38 @@
+=========Ta se ta.o duoc BaiThi
+
+
+=========SPECIFICATION:
+
+<1>
+Bai thi se tao duoc ca'c loai cau hoi nhu sau:
+
+
+PhepCong
+PhepChia
+PhepNhan
+Toa'nHi`nh
+
+================================================================MODULE 1 TA.O MOI
+<2>
+Browser se cho phep user ta.o moi BaiThi
+
+<3>
+User sau khi ta.o BaiThi thi` co the them cac' cau hoi vao baiThi, bao nhieu cung duoc
+
+<4>
+Se co' 1 combobox, de USER lua cho.n lo.ai cau hoi (PhepCong, PhepChia,...) de them vao bai thi
+
+<5>
+User nhap noi dung cho tu*`ng loa.i cau hoi
+
+==========================================================MODULE 2 QUAN LY CAU HOI
+User cho.n bai thi
+Browser thien thi. danh sa'ch cac cau hoi
+
+=========MODELS RELATIONSHIP
+Baithi----has many----Loai cau hoi 
+cac phep ti'nh----belongs to----Loai cau hoi
+cac phep ti'nh----belongs to----Bai Thi (BAITHI has MANY phepTi'nh, eg. BAITHI has-many phep cong)
+
+NOTE::cac phep ti'nh, tu*'c la`: PhepCong, PhepChia...
+

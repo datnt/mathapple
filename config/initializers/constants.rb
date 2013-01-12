@@ -1,1 +1,0 @@
-BTMODELS = {"Phép Cộng" => "PhepCong"}
