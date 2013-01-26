@@ -5,7 +5,7 @@ class CreateHonSos < ActiveRecord::Migration
       t.string :songuyen
       t.string :phanso_a# co dinh da.ng la` 2/3; luu trong database; con hien thi giao dien van la kieu truyen thong
       t.string :phanso_b
-      t.string :ketqua #se la 1 phan so, thuo*ng cua 2 phan so a&b
+      t.string :ketqua #se la 1 phan so, da.ng to'an la` chuyen doi hon so thanh phan so
 
       t.timestamps
     end
