@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126082607) do
+ActiveRecord::Schema.define(:version => 20130126085443) do
 
   create_table "bai_taps", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,26 @@ ActiveRecord::Schema.define(:version => 20130126082607) do
 
   create_table "cong_phan_sos", :force => true do |t|
     t.string   "cau_hoi"
+    t.string   "phanso_a"
+    t.string   "phanso_b"
+    t.string   "ketqua"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "dodais", :force => true do |t|
+    t.string   "cau_hoi"
+    t.string   "so_a"
+    t.string   "donvi_a"
+    t.string   "so_b"
+    t.string   "donvi_b"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "hon_so_thap_phans", :force => true do |t|
+    t.string   "cau_hoi"
+    t.string   "songuyen"
     t.string   "phanso_a"
     t.string   "phanso_b"
     t.string   "ketqua"
