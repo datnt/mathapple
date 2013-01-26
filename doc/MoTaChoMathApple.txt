@@ -25,6 +25,9 @@ Se co' 1 combobox, de USER lua cho.n lo.ai cau hoi (PhepCong, PhepChia,...) de t
 <5>
 User nhap noi dung cho tu*`ng loa.i cau hoi
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>Cap nhat vao ngay 19 thang 1 nam 2013
+moi mot phe'p ti'nh trong phan Mu.c Lu.c se duoc cau tao thanh 1 model voi migrate tuong ung
+xem code la` hieu
 ==========================================================MODULE 2 QUAN LY CAU HOI
 User cho.n bai thi
 Browser thien thi. danh sa'ch cac cau hoi
