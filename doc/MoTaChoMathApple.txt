@@ -39,3 +39,8 @@ cac phep ti'nh----belongs to----Bai Thi (BAITHI has MANY phepTi'nh, eg. BAITHI h
 
 NOTE::cac phep ti'nh, tu*'c la`: PhepCong, PhepChia...
 
+
+==========================================================GIAO DIEN THAM KHAO
+http://christian-kienle.de/Flashcards
+http://christian-kienle.de/
+http://twitter.github.com/bootstrap/examples/starter-template.html#contact
