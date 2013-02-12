@@ -21,6 +21,12 @@ class BaiTapsController < ApplicationController
 
   def them_cau_hoi
     @baitap = BaiTap.find(params[:id])
+    @cauhoi = LoaiCauHoi.new
+  end
+
+  def luu_cau_hoi
+    @baitap = BaiTap.find(params[:id])
+    redirect_to bai_taps_path(:@baitap)
   end
 
 
@@ -62,15 +68,8 @@ class BaiTapsController < ApplicationController
     # tuy vao tham so nay ma` khoi tao model cau hoi tuong ung
     @cauhoi = PhepCong.new
   end
-  def luu_cau_hoi
 
-    @cauhoi = PhepCong.new(params[:phep_cong])
-    @cauhoi.loai_cau_hoi_id = 1
-
-    if @cauhoi.save
-      redirect_to cac_cau_hoi_bai_taps_path
-    end
-  end
+  
   def cac_cau_hoi
     
   end
