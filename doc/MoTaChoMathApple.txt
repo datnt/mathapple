@@ -34,10 +34,19 @@ Browser thien thi. danh sa'ch cac cau hoi
 
 =========MODELS RELATIONSHIP
 Baithi----has many----Loai cau hoi 
-cac phep ti'nh----belongs to----Loai cau hoi
-cac phep ti'nh----belongs to----Bai Thi (BAITHI has MANY phepTi'nh, eg. BAITHI has-many phep cong)
+cac phep ti'nh----belongs to----Loaicau hoi
+BAITHI--has many cau hoi-- ;;; cau hoi has one PHEPTINH (PHEPTINH tuc la phep cong tru, thap phan....etc)
+
 
 NOTE::cac phep ti'nh, tu*'c la`: PhepCong, PhepChia...
+
+Ca'ch ta.o du lieu:
+bt = Baithi.create, 
+ch = LoaiCauhoi.create
+ch.Baithi = bt
+pc PhepCong.new 
+pc.CauHoi = ch
+pc.save
 
 
 ==========================================================GIAO DIEN THAM KHAO

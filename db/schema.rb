@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20130212021949) do
   end
 
   create_table "loai_cau_hois", :force => true do |t|
+    t.integer  "bai_tap_id", :null => false
     t.string   "title"
     t.text     "content"
     t.datetime "created_at", :null => false
