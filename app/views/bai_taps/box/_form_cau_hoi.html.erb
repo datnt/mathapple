@@ -9,7 +9,7 @@
           Loại câu hỏi
         </td>
         <td>
-          To: <%= select("loai_cau_hoi", "cau_hoi", User.where('email <> ?',current_user.email).collect {|p| [ p.name, p.id ] }, {:include_blank => false}, :class => "span3") %>
+          To: <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => false}, :class => "span3") %>
 
         </td>
       </tr>
