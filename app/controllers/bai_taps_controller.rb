@@ -29,6 +29,10 @@ class BaiTapsController < ApplicationController
     redirect_to bai_taps_path(:@baitap)
   end
 
+  def form_cau_hoi
+    render :layout => false
+  end
+
 
 
 
