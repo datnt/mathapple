@@ -1,7 +1,10 @@
 <div class="row">
   <%= @cate.ten %>
 </div>
-<% arr_pheptinh =["PhepCong", "PhepChia", "ChiaPhanso", "ChiaThapPhan10K", "ChiaThapPhanTp", "ChiaThapPhanTuNhien", "ChiaTnThapPhan", "ChiaTnTnThapPhan", "CongNhieuThapPhan", "CongPhanSo", "Dodai", "HonSo", "HonSoThapPhan", "NhanPhanso", "NhanThapPhan10K", "NhanThapPhanThapPhan", "NhanThapPhanTuNhien", "PhanSoThapPhan", "SoSanhPhanSo", "ThapPhanVaTong", "TiSoPhanTram", "TruPhanSo", "TruThapPhan"] %>
+<% arr_pheptinh =["PhepCong", "PhepChia", "ChiaPhanso", "ChiaThapPhan10K", "ChiaThapPhanTp", "ChiaThapPhanTuNhien", "ChiaTnThapPhan",
+  "ChiaTnTnThapPhan", "CongNhieuThapPhan", "CongPhanSo", "Dodai", "HonSo", "HonSoThapPhan",
+  "NhanPhanso", "NhanThapPhan10K", "NhanThapPhanThapPhan", "NhanThapPhanTuNhien", "PhanSoThapPhan",
+  "SoSanhPhanSo", "ThapPhanVaTong", "TiSoPhanTram", "TruPhanSo", "TruThapPhan"] %>
 
 <%# if @cauhoi.class.to_s == "PhepCong" %>
 <%#= render :partial => "/bai_taps/form/phep_cong" %>
@@ -20,6 +23,42 @@ when "ChiaThapPhan10K"
   render :partial => "/bai_taps/form/chia_thapphan10k"
 when "ChiaThapPhanTp"
   render :partial => "/bai_taps/form/chia_thapphantp"
+when "ChiaThapPhanTuNhien"
+  render :partial => "/bai_taps/form/chia_thapphantn"
+when "ChiaTnThapPhan"
+  render :partial => "/bai_taps/form/chia_tnthapphan"
+when "ChiaTnTnThapPhan"
+  render :partial => "/bai_taps/form/chia_tntnthapphan"
+when "CongNhieuThapPhan"
+  render :partial => "/bai_taps/form/congnhieutp"
+when "CongPhanSo"
+  render :partial => "/bai_taps/form/congphanso"
+when "Dodai"
+  render :partial => "/bai_taps/form/dodai"
+when "HonSo"
+  render :partial => "/bai_taps/form/honso"
+when "HonSoThapPhan"
+  render :partial => "/bai_taps/form/honsotp"
+when "NhanPhanso"
+  render :partial => "/bai_taps/form/nhanphanso"
+when "NhanThapPhan10K"
+  render :partial => "/bai_taps/form/nhantp10k"
+when "NhanThapPhanThapPhan"
+  render :partial => "/bai_taps/form/nhantptp"
+when "NhanThapPhanTuNhien"
+  render :partial => "/bai_taps/form/nhantptn"
+when "PhanSoThapPhan"
+  render :partial => "/bai_taps/form/phansotp"
+when "SoSanhPhanSo"
+  render :partial => "/bai_taps/form/sosanhps"
+when "ThapPhanVaTong"
+  render :partial => "/bai_taps/form/thapphantong"
+when "TiSoPhanTram"
+  render :partial => "/bai_taps/form/tisophantram"
+when "TruPhanSo"
+  render :partial => "/bai_taps/form/truphanso"
+when "TruThapPhan"
+  render :partial => "/bai_taps/form/trutp"
 else "error; co loi"
 end
 %>
