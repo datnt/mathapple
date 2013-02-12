@@ -1,16 +1,25 @@
-<%= @cate.ten %>
-===<%= @cauhoi.class %>
+<div class="row">
+  <%= @cate.ten %>
+</div>
 <% arr_pheptinh =["PhepCong", "PhepChia", "ChiaPhanso", "ChiaThapPhan10K", "ChiaThapPhanTp", "ChiaThapPhanTuNhien", "ChiaTnThapPhan", "ChiaTnTnThapPhan", "CongNhieuThapPhan", "CongPhanSo", "Dodai", "HonSo", "HonSoThapPhan", "NhanPhanso", "NhanThapPhan10K", "NhanThapPhanThapPhan", "NhanThapPhanTuNhien", "PhanSoThapPhan", "SoSanhPhanSo", "ThapPhanVaTong", "TiSoPhanTram", "TruPhanSo", "TruThapPhan"] %>
 
 <%# if @cauhoi.class.to_s == "PhepCong" %>
-  <%#= render :partial => "/bai_taps/form/phep_cong" %>
+<%#= render :partial => "/bai_taps/form/phep_cong" %>
 <%# end %>
 
 
 <%=
-  case @cauhoi.class.to_s
-  when "PhepCong" 
-    render :partial => "/bai_taps/form/phep_cong"
-  else "error; co loi"
-  end
-  %>
+case @cauhoi.class.to_s
+when "PhepCong" 
+  render :partial => "/bai_taps/form/phep_cong"
+when "PhepChia"
+  render :partial => "/bai_taps/form/phep_chia"
+when "ChiaPhanso"
+  render :partial => "/bai_taps/form/chia_phanso"
+when "ChiaThapPhan10K"
+  render :partial => "/bai_taps/form/chia_thapphan10k"
+when "ChiaThapPhanTp"
+  render :partial => "/bai_taps/form/chia_thapphantp"
+else "error; co loi"
+end
+%>
