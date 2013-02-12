@@ -14,6 +14,44 @@ class BaiTapsController < ApplicationController
     end
 
   end
+
+  def show
+    @baitap = BaiTap.find(params[:id])
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   def cau_hoi
     #cho nay tam thoi nhu vay
     # sau nay se phai truyen vao tham so loai cau hoi
