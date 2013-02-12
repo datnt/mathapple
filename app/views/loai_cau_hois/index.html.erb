@@ -1,3 +1,107 @@
 <% @phanloais.each do |pl| %>
   <%= pl.title %><br/>
 <% end %>
+
+
+<div style="height: 100%; min-height: 100%; !important;" class="container">
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <!--  <div class="hero-unit">
+      <h1>Welcome.</h1>
+      <p>This is the website of Christian Kienle: Mac OS X and iOS developer, author of several <a class="cmk_linkInText" href="http://www.amazon.de/s/ref=ntt_athr_dp_sr_2?_encoding=UTF8&search-alias=books-de&field-author=Christian%20Kienle">Cocoa/Objective-C related books</a>, <a class="cmk_linkInText" href="http://arstechnica.com/apple/news/2010/05/2010-ars-design-awards-nominations.ars">2x Ars Design Award nominee</a> and <a class="cmk_linkInText" href="http://en.wikipedia.org/wiki/Anime">anime</a>/<a class="cmk_linkInText" href="http://en.wikipedia.org/wiki/Star_Trek">SciFi</a> fan.</p>
+    </div>-->
+  <div style="margin-top:65px;" class="row">
+    <div style="text-align:center;" class="span5 columns">
+      <img alt="Flashcards Icon" src="images/flashcards-icon.png">
+      <br>
+      <a class="btn large success" href="http://itunes.apple.com/app/flashcards/id403021928?mt=12&amp;uo=4">View in the Mac App Store</a>
+    </div>
+    <div class="span11 columns">
+      <div class="appInfo">
+        <div class="page-header">
+          <h1 id="contact">Flashcards <small>Learning made easy.</small></h1>
+        </div>
+        <p>Organize your cards in decks, folders and smart decks. When selecting a deck, its cards will be shown in a table. Each card has a progress indicator so that you see your overall performance at a glance.</p>
+
+        <div class="page-header">
+          <h4>A wonderful way to study <small></small></h4>
+        </div>
+        <img style="float:left; margin-right: 8px; margin-top:2px;" src="images/flashcards/study.png">
+        <p>Select the deck and press “Study”. It is that easy. Flashcards will show you the cards one by one. You can type in your answer and Ebbinghaus will automatically detect whether your answer is right or wrong.</p>
+
+        <div class="page-header">
+          <h4>Smart Decks <small></small></h4>
+        </div>
+        <img style="float:left; margin-right: 8px; margin-top:2px;" src="images/flashcards/smart.png">
+
+        <p>Smart decks allow you to specify a set of rules that determine which cards the deck will contain. For example, you could have a smart deck that always contains cards you recently studied and answered wrong.</p>
+
+        <div class="page-header">
+          <h4>LaTeX formulas<small></small></h4>
+        </div>
+        <img style="float:left; margin-right: 8px; margin-top:2px;" src="images/flashcards/formulas.png">
+
+        <p>Flashcards comes with a formula editor. The formula editor lets you create graphical formulas by typing in a LaTeX style text. For example, you can then drop the formula on any card. That’s the best way to learn formulas of nearly any complexity.</p>
+
+        <div class="page-header">
+          <h4>Exporting to iPhoto <small></small></h4>
+        </div>
+        <img style="float:left; margin-right: 8px; margin-top:2px;" src="images/flashcards/iPhoto.png">
+
+        <p>Do you own an iPod or an iPhone? Great! Flashcards lets you export decks as a series of images directly to iPhoto with just a few clicks. You can then use iTunes to sync them onto your iPod or iPhone and study on the go.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span16 columns">
+      <div class="cmk_contentBox">
+        <div class="page-header">
+          <h1 id="about">Screenshots <small>A picture is worth a thousand words.</small></h1>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/flashcards/Screenshots/MainWindow.png" id="current_screenshot" class="appScreenshot">
+          <br>
+          <br>
+          <p>
+            <a href="#current_screenshot" id="show_main_window" class="cmk_linkInText">Main Window</a> &ndash; <a href="#current_screenshot" id="show_formula_editor" class="cmk_linkInText">Formula Editor</a> &ndash; <a href="#current_screenshot" id="show_card_show" class="cmk_linkInText">Card Show</a> &ndash; <a href="#current_screenshot" id="show_exporting" class="cmk_linkInText">Exporting</a> &ndash; <a href="#current_screenshot" id="show_smart_deck" class="cmk_linkInText">Smart Decks</a> &ndash; <a href="#current_screenshot" id="show_study_settings" class="cmk_linkInText">Study Settings</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script language="javascript" type="text/javascript">
+    $("#show_main_window").click(function () {
+      $("#current_screenshot").attr('src','images/flashcards/Screenshots/MainWindow.png');
+    });
+
+    $("#show_formula_editor").click(function () {
+      $("#current_screenshot").attr('src','images/flashcards/Screenshots/FormulaEditor.png');
+    });
+
+    $("#show_card_show").click(function () {
+      $("#current_screenshot").attr('src','images/flashcards/Screenshots/CardShow.png');
+    });
+  </script>
+  <footer>
+    <p>&copy; Christian Kienle 2011 &ndash; <a class="cmk_linkInText" href="mailto:support@christian-kienle.de">support@christian-kienle.de</a> &ndash; <a class="cmk_linkInText" href="Imprint">Imprint</a></p>
+    <!--	<div class="row show-grid" title="Default three column layout">
+	    <div class="span-one-third column">
+		<ul><li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-3033417531996741856">iCloud causes major depressions</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-4776045478072143340">Core Data Editor + Sandboxing = trouble</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-2446051032970180227">Core Data, Document-Based Application and Sandboxing</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-4659312687002970926">Flashcards Pro for iPad released</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-8863267483792625160">Flashcards for iPad: Status</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-248597707270659378">Creating an iOS based Core Data Editor project (Video Tutorial)</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-2198227006306904381">Objective-C needs Java's Annotations</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-7303278419948800686">Core Data Editor 4.2</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-7323530395879630832">Automatically dismiss "App X Would like to Use Your Current Location" dialogs - easy?</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-3327212067138076641">If you need a good designer...</a></li>
+			<li><a href="tag:blogger.com,1999:blog-3733114751386359986.post-7199273763300361136">Status Report: Flashcards for iPad</a></li>
+			</ul>	    </div>
+	    <div class="span-one-third column">1/3</div>
+	    <div class="span-one-third column">1/3</div>
+	  </div>-->
+  </footer>
+
+</div>
