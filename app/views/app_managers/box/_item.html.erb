@@ -1,0 +1,20 @@
+
+<div class="appInfo">
+  <div class="page-header">
+    <h1 id="contact">Danh sách  <small>các bài thi do giáo viên tạo ra.</small></h1>
+  </div>
+
+
+  <% @baitaps.each do |bt| %>
+    <img src="/images/flashcards/formulas.png" style="float:left; margin-right: 8px; margin-top:2px;"/>
+    <p><%= bt.name %></p>
+
+    <div class="page-header">
+      <h4><%= bt.description %><small></small></h4>
+    </div>
+  <% end %>
+
+
+
+
+</div>
