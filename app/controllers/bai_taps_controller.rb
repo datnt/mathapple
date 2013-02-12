@@ -31,6 +31,7 @@ class BaiTapsController < ApplicationController
 
   def form_cau_hoi
     @cate = Category.find(params[:id_cau_hoi])
+    @cauhoi = eval(@cate.ma_cau_hoi).new
     render :layout => false
   end
 

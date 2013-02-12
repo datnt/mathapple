@@ -1,1 +1,16 @@
 <%= @cate.ten %>
+===<%= @cauhoi.class %>
+<% arr_pheptinh =["PhepCong", "PhepChia", "ChiaPhanso", "ChiaThapPhan10K", "ChiaThapPhanTp", "ChiaThapPhanTuNhien", "ChiaTnThapPhan", "ChiaTnTnThapPhan", "CongNhieuThapPhan", "CongPhanSo", "Dodai", "HonSo", "HonSoThapPhan", "NhanPhanso", "NhanThapPhan10K", "NhanThapPhanThapPhan", "NhanThapPhanTuNhien", "PhanSoThapPhan", "SoSanhPhanSo", "ThapPhanVaTong", "TiSoPhanTram", "TruPhanSo", "TruThapPhan"] %>
+
+<%# if @cauhoi.class.to_s == "PhepCong" %>
+  <%#= render :partial => "/bai_taps/form/phep_cong" %>
+<%# end %>
+
+
+<%=
+  case @cauhoi.class.to_s
+  when "PhepCong" 
+    render :partial => "/bai_taps/form/phep_cong"
+  else "error; co loi"
+  end
+  %>
