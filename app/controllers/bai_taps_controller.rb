@@ -30,7 +30,7 @@ class BaiTapsController < ApplicationController
   end
 
   def form_cau_hoi
-    @pheptinh = params[:id_cau_hoi]
+    @cate = Category.find(params[:id_cau_hoi])
     render :layout => false
   end
 
