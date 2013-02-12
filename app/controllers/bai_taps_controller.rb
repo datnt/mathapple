@@ -20,7 +20,7 @@ class BaiTapsController < ApplicationController
   end
 
   def them_cau_hoi
-    render :layout => false
+    @baitap = BaiTap.find(params[:id])
   end
 
 

@@ -7,7 +7,7 @@
   <h5>Hiện có</h5> <h3><%= @baitap.loai_cau_hois.size %></h3> câu hỏi
 
   <div>
-    <a class="btn btn-success">Thêm câu hỏi</a>
+    <a class="btn btn-success" href="<%= them_cau_hoi_bai_taps_path(:id => @baitap.id) %>">Thêm câu hỏi</a>
   </div>
 
   <div class="page-header">
