@@ -19,22 +19,28 @@
   <!--
   khi nao user click va`o loai cau hoi xong thi` moi load form
   -->
+  <div id="place_for_form">
 
+  </div>
 </div>
 
 <script>
   $(document).ready(function(){
     $('#chon_cau_hoi').change(function(){
-      LoadForm();
+      var id_category = $('#chon_cau_hoi').val();
+      LoadForm(id_category);
     });
   });
-  function LoadForm(){
+  function LoadForm(id_cau_hoi){
     $.ajax({
       url: "<%= form_cau_hoi_bai_taps_path %>",
       type : 'GET',
       data: {
+        id: '<%= @baitap.id %>',
+        id_cau_hoi: id_cau_hoi
       },
       success: function(data){
+        $('#place_for_form').html(data);
       },
       error: function(){
       }
