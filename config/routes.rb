@@ -68,7 +68,7 @@ Mathapple::Application.routes.draw do
         :luu_trups, :luu_nhanps, :luu_chiaps, :luu_honso, :luu_dodai, :luu_honsotp,
         :luu_congnhieutp, :luu_tpvatong, :luu_trutp, :luu_nhantptn, :luu_nhantp10k,
       :luu_nhantptp,:luu_chiatptn, :luu_chiatp10k,:luu_chiatntntp, :luu_chiatntp,
-      :luu_chiatptp
+      :luu_chiatptp, :luu_tiso
     end
   end
   resources :loai_cau_hois do

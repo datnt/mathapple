@@ -7,6 +7,8 @@ class CreateTiSoPhanTrams < ActiveRecord::Migration
       t.string :so_b#truong hop viet_lai, so_b=nil
       t.string :ketqua#dung de so sanh voi du lieu ma hoc sinh nhap vao
 
+      t.belongs_to :loai_cau_hoi, :null => false
+
 
       t.timestamps
     end
