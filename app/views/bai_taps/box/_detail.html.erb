@@ -67,8 +67,8 @@ when "ThapPhanVaTong"
   #render :partial => "/bai_taps/form/tisophantram"
 when "TruPhanSo"
   render :partial => "/bai_taps/grid_item/truphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-#when "TruThapPhan"
-  #render :partial => "/bai_taps/form/trutp"
+when "TruThapPhan"
+  render :partial => "/bai_taps/grid_item/trutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 else "error; co loi"
 end
 %>
