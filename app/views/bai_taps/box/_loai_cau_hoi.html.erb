@@ -9,7 +9,7 @@
         Loại câu hỏi
       </td>
       <td>
-        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => false}, :class => "span3", :id => "chon_cau_hoi") %>
+        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => true}, :class => "span3", :id => "chon_cau_hoi") %>
       </td>
     </tr>
   </table>
