@@ -64,7 +64,8 @@ Mathapple::Application.routes.draw do
   resources :bai_taps do
     collection do
       get :cau_hoi, :cac_cau_hoi, :bai_thi, :them_cau_hoi, :form_cau_hoi
-      post :luu_phep_cong, :luu_bai_thi, :luu_sosanhps, :luu_phansotp, :luu_congps
+      post :luu_phep_cong, :luu_bai_thi, :luu_sosanhps, :luu_phansotp, :luu_congps,
+        :luu_trups
     end
   end
   resources :loai_cau_hois do
