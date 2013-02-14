@@ -11,6 +11,9 @@ class CreateDodais < ActiveRecord::Migration
       t.string :donvi_a #ta se su dung so sa'nh chuoi de xac di.nh la m(met) hay dm(decimet)
       t.string :so_b
       t.string :donvi_b
+      t.string :ketqua
+      t.belongs_to :loai_cau_hoi, :null => false
+
 
 
       t.timestamps

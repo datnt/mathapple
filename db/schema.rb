@@ -108,8 +108,10 @@ ActiveRecord::Schema.define(:version => 20130212082813) do
     t.string   "donvi_a"
     t.string   "so_b"
     t.string   "donvi_b"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "ketqua"
+    t.integer  "loai_cau_hoi_id", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "hon_so_thap_phans", :force => true do |t|
