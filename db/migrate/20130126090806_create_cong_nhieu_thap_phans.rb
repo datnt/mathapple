@@ -7,6 +7,8 @@ class CreateCongNhieuThapPhans < ActiveRecord::Migration
       t.string :so_c
       t.string :ketqua #se la 1 so thap phan
 #NOTE: trong sach chi co cong 3 so la toi da
+      t.belongs_to :loai_cau_hoi, :null => false
+
       t.timestamps
     end
   end
