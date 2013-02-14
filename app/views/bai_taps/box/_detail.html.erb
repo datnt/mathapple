@@ -31,8 +31,8 @@ when "ChiaPhanso"
   render :partial => "/bai_taps/grid_item/chia_phanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 when "ChiaThapPhan10K"
   render :partial => "/bai_taps/grid_item/chia_thapphan10k", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-#when "ChiaThapPhanTp"
-  #render :partial => "/bai_taps/form/chia_thapphantp"
+when "ChiaThapPhanTp"
+  render :partial => "/bai_taps/grid_item/chia_thapphantp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 when "ChiaThapPhanTuNhien"
   render :partial => "/bai_taps/grid_item/chia_thapphantn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 when "ChiaTnThapPhan"

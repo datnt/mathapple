@@ -7,6 +7,8 @@ class CreateChiaThapPhanTps < ActiveRecord::Migration
       t.string :ketqua 
 #NOTE: nho validate luc' nhap du lieu,ketqua phai la so thap phan va la thuong cua a&b
 
+      t.belongs_to :loai_cau_hoi, :null => false
+
       t.timestamps
     end
   end
