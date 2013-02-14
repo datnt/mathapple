@@ -44,7 +44,7 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
   end
   def luu_sosanhps
     @baitap = BaiTap.find(params[:id])
@@ -59,7 +59,7 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
   end
   def luu_phansotp
     @baitap = BaiTap.find(params[:id])
@@ -74,7 +74,7 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
   end
   def luu_congps
     @baitap = BaiTap.find(params[:id])
@@ -89,7 +89,7 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
   end
   def luu_trups
     @baitap = BaiTap.find(params[:id])
@@ -104,7 +104,7 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
   end
   def luu_nhanps
     @baitap = BaiTap.find(params[:id])
@@ -120,7 +120,6 @@ class BaiTapsController < ApplicationController
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
     redirect_to bai_tap_path(:id => @baitap.id)
-#    redirect_to bai_taps_path(:id => @baitap.id)
   end
 
 
