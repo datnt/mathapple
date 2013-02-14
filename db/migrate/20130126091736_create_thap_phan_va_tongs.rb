@@ -9,6 +9,9 @@ class CreateThapPhanVaTongs < ActiveRecord::Migration
 #NOTE: co the^? lu'c code giao dien, ta se da?o vi. tri' cua phep cong va so dich de co them cach
 #hien thi da da.ng loai bai toan
 
+      t.belongs_to :loai_cau_hoi, :null => false
+
+
       t.timestamps
     end
   end
