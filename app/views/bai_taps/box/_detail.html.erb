@@ -55,8 +55,8 @@ when "NhanPhanso"
   #render :partial => "/bai_taps/form/nhantp10k"
 #when "NhanThapPhanThapPhan"
   #render :partial => "/bai_taps/form/nhantptp"
-#when "NhanThapPhanTuNhien"
-  #render :partial => "/bai_taps/form/nhantptn"
+when "NhanThapPhanTuNhien"
+  render :partial => "/bai_taps/grid_item/nhantptn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 when "PhanSoThapPhan"
   render :partial => "/bai_taps/grid_item/phansotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 when "SoSanhPhanSo"
