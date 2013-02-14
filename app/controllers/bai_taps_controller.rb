@@ -24,16 +24,29 @@ class BaiTapsController < ApplicationController
     @cauhoi = LoaiCauHoi.new
   end
 
-  def luu_cau_hoi
-    @baitap = BaiTap.find(params[:id])
-    redirect_to bai_taps_path(:@baitap)
-  end
-
   def form_cau_hoi
+    @baitap = BaiTap.find(params[:id])
     @cate = Category.find(params[:id_cau_hoi])
     @cauhoi = eval(@cate.ma_cau_hoi).new
     render :layout => false
   end
+
+  def luu_phep_cong
+    @baitap = BaiTap.find(params[:id])
+    cate = Category.find(params[:id_cau_hoi])
+
+    @cauhoi = PhepCong.new(params[:phep_cong])
+    loai = LoaiCauHoi.new
+    loai.bai_tap_id = @baitap.id
+    loai.title = cate.ten
+    loai.content = cate.ma_cau_hoi
+    loai.save
+
+    @cauhoi.loai_cau_hoi_id = loai.id
+    @cauhoi.save
+    redirect_to bai_taps_path(:@baitap)
+  end
+
 
 
 

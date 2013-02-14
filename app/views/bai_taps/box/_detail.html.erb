@@ -13,12 +13,85 @@
   <div class="page-header">
     <h4><small></small></h4>
   </div>
+  <% @baitap.loai_cau_hois.each do |c| %>
   <div class="page-header">
-    <h4><small>abc</small></h4>
-  </div>
-  <div class="page-header">
-    <h4><small>abc</small></h4>
-  </div>
+    <h4><small><%= c.title %></small></h4>
+
+
+
+
+
+<%=
+case c.content.to_s
+when "PhepCong"
+  render :partial => "/bai_taps/grid_item/phep_cong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+#when "PhepChia"
+  #render :partial => "/bai_taps/form/phep_chia"
+#when "ChiaPhanso"
+  #render :partial => "/bai_taps/form/chia_phanso"
+#when "ChiaThapPhan10K"
+  #render :partial => "/bai_taps/form/chia_thapphan10k"
+#when "ChiaThapPhanTp"
+  #render :partial => "/bai_taps/form/chia_thapphantp"
+#when "ChiaThapPhanTuNhien"
+  #render :partial => "/bai_taps/form/chia_thapphantn"
+#when "ChiaTnThapPhan"
+  #render :partial => "/bai_taps/form/chia_tnthapphan"
+#when "ChiaTnTnThapPhan"
+  #render :partial => "/bai_taps/form/chia_tntnthapphan"
+#when "CongNhieuThapPhan"
+  #render :partial => "/bai_taps/form/congnhieutp"
+#when "CongPhanSo"
+  #render :partial => "/bai_taps/form/congphanso"
+#when "Dodai"
+  #render :partial => "/bai_taps/form/dodai"
+#when "HonSo"
+  #render :partial => "/bai_taps/form/honso"
+#when "HonSoThapPhan"
+  #render :partial => "/bai_taps/form/honsotp"
+#when "NhanPhanso"
+  #render :partial => "/bai_taps/form/nhanphanso"
+#when "NhanThapPhan10K"
+  #render :partial => "/bai_taps/form/nhantp10k"
+#when "NhanThapPhanThapPhan"
+  #render :partial => "/bai_taps/form/nhantptp"
+#when "NhanThapPhanTuNhien"
+  #render :partial => "/bai_taps/form/nhantptn"
+#when "PhanSoThapPhan"
+  #render :partial => "/bai_taps/form/phansotp"
+#when "SoSanhPhanSo"
+  #render :partial => "/bai_taps/form/sosanhps"
+#when "ThapPhanVaTong"
+  #render :partial => "/bai_taps/form/thapphantong"
+#when "TiSoPhanTram"
+  #render :partial => "/bai_taps/form/tisophantram"
+#when "TruPhanSo"
+  #render :partial => "/bai_taps/form/truphanso"
+#when "TruThapPhan"
+  #render :partial => "/bai_taps/form/trutp"
+else "error; co loi"
+end
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <% end %>
 
 
 
