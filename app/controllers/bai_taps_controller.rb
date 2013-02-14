@@ -119,7 +119,8 @@ class BaiTapsController < ApplicationController
 
     @cauhoi.loai_cau_hoi_id = loai.id
     @cauhoi.save
-    redirect_to bai_taps_path(:@baitap)
+    redirect_to bai_tap_path(:id => @baitap.id)
+#    redirect_to bai_taps_path(:id => @baitap.id)
   end
 
 
