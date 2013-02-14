@@ -27,8 +27,8 @@ when "PhepCong"
   render :partial => "/bai_taps/grid_item/phep_cong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 #when "PhepChia"
   #render :partial => "/bai_taps/form/phep_chia"
-#when "ChiaPhanso"
-  #render :partial => "/bai_taps/form/chia_phanso"
+when "ChiaPhanso"
+  render :partial => "/bai_taps/grid_item/chia_phanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
 #when "ChiaThapPhan10K"
   #render :partial => "/bai_taps/form/chia_thapphan10k"
 #when "ChiaThapPhanTp"
