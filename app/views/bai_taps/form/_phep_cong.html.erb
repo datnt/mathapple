@@ -1,9 +1,11 @@
-phepcong
-phepcong
-phepcong
-phepcong
-phepcong
-phepcong
-phepcong
-phepcong
-phepcong
+<%# :ketqua, :so_a, :so_b%>
+<%= form_for(@cauhoi, :url => luu_cau_hoi_bai_taps_path , :html => {:multipart => false, :id => "form_cau_hoi" }, :method => :post) do |f| %>
+  <%= f.label "Số thứ nhất" %>
+  <%= f.text_field :so_a %>
+  <%= f.label "Số thứ hai" %>
+  <%= f.text_field :so_b %>
+  <%= f.label "Kết quả" %>
+  <%= f.text_field :ketqua %>
+<div class="page-header"></div>
+  <%= f.submit "Khởi tạo" %>
+<% end %>
