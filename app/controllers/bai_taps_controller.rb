@@ -241,6 +241,21 @@ class BaiTapsController < ApplicationController
     @cauhoi.save
     redirect_to bai_tap_path(:id => @baitap.id)
   end
+  def luu_nhantp10k
+    @baitap = BaiTap.find(params[:id])
+    cate = Category.find(params[:id_cau_hoi])
+
+    @cauhoi = NhanThapPhan10K.new(params[:nhan_thap_phan10_k])
+    loai = LoaiCauHoi.new
+    loai.bai_tap_id = @baitap.id
+    loai.title = cate.ten
+    loai.content = cate.ma_cau_hoi
+    loai.save
+
+    @cauhoi.loai_cau_hoi_id = loai.id
+    @cauhoi.save
+    redirect_to bai_tap_path(:id => @baitap.id)
+  end
 
 
 
