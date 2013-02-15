@@ -149,10 +149,10 @@ ActiveRecord::Schema.define(:version => 20130215020947) do
   end
 
   create_table "ket_quas", :force => true do |t|
-    t.integer  "loai_cau_hoi_id", :null => false
-    t.integer  "hoc_sinh_id",     :null => false
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.integer  "bai_tap_id",  :null => false
+    t.integer  "hoc_sinh_id", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "loai_cau_hois", :force => true do |t|
@@ -227,6 +227,7 @@ ActiveRecord::Schema.define(:version => 20130215020947) do
     t.integer  "loai_cau_hoi_id",                                :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+    t.string   "cau_hoi"
   end
 
   create_table "so_sanh_phan_sos", :force => true do |t|

@@ -30,11 +30,11 @@ class AppManagersController < ApplicationController
     @traloi = TraLoi.new
     @cauhoi = @baitap.loai_cau_hois.first
     @traloi.loai_cau_hoi_id = @baitap.loai_cau_hois.first.id
-    if KetQua.where(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id).size == 0
-      @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
+    if KetQua.where(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id).size == 0
+      @ketqua = KetQua.create(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id)
       session[:current_ketqua] = @ketqua.id
     else
-      @ketqua = KetQua.where(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id).first
+      @ketqua = KetQua.where(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id).first
       session[:current_ketqua] = @ketqua.id
     end
   end
@@ -55,7 +55,7 @@ class AppManagersController < ApplicationController
     if @cauhoi != nil
     
       @traloi.loai_cau_hoi_id =@cauhoi.id
-      @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
+      @ketqua = KetQua.where(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id).first
       @ketqua = KetQua.find(session[:current_ketqua])
       render :action => "lambai"
     else
@@ -66,5 +66,9 @@ class AppManagersController < ApplicationController
   end
   def ketthuc
     
+  end
+  def review
+    @baitap = BaiTap.find(session[:current_baitap])
+    @ketquas = KetQua.where(:bai_tap_id => @baitap.id)
   end
 end
