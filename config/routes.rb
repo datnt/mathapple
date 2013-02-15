@@ -58,7 +58,7 @@ Mathapple::Application.routes.draw do
   root :to => 'app_managers#danh_muc'
   resources :app_managers do
     collection do
-      get  :danh_muc, :mucluc, :reception, :lambai, :tiep_theo, :ketthuc, :review, :da_lam_roi
+      get  :danh_muc, :mucluc, :reception, :lambai, :tiep_theo, :ketthuc, :review, :da_lam_roi, :lamlai
       post :xulymahs, :newhs, :luu_traloi
     end
   end

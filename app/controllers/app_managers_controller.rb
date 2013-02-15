@@ -69,10 +69,20 @@ class AppManagersController < ApplicationController
     
   end
   def ketthuc
-    
   end
   def review
     @baitap = BaiTap.find(params[:id])
     @ketquas = KetQua.where(:bai_tap_id => @baitap.id)
+  end
+  def lamlai
+    @baitap = BaiTap.find(session[:current_baitap])
+    @hocsinh = HocSinh.find(session[:current_user])
+    @ketqua = KetQua.where(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id).first
+    @ketqua.tra_lois.each do |t|
+      t.destroy
+    end
+
+    session[:next_cauhoi_index] = 0
+    redirect_to :action => "tiep_theo"
   end
 end
