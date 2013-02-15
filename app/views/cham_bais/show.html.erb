@@ -45,7 +45,19 @@
   </div>
 </div>
 <script>
-  function DanhGia(v, id){
-    alert('v == '+id);
+  function DanhGia(ketqua, id){
+    $.ajax({
+      url: "<%= danhgia_cham_bais_path %>",
+      type : 'GET',
+      data: {
+        id: ketqua,
+        id_tra_loi: id
+      },
+      success: function(data){
+      },
+      error: function(){
+      }
+    });
+
   }
 </script>

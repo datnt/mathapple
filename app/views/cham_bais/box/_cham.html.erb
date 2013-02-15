@@ -1,6 +1,14 @@
 <div id="verify<%= traloi.id %>">
-  <input type="radio" name="verify" value="yes"/>Đúng<br/>
-  <input type="radio" name="verify" value="no"/>Sai
+  <% if traloi.dapan == "yes" %>
+    <input type="radio" name="verify<%= traloi.id %>" value="yes" checked="checked"/>Đúng<br/>
+    <input type="radio" name="verify<%= traloi.id %>" value="no"/>Sai
+  <% elsif traloi.dapan == "no" %>
+    <input type="radio" name="verify<%= traloi.id %>" value="yes"/>Đúng<br/>
+    <input type="radio" name="verify<%= traloi.id %>" value="no" checked="checked"/>Sai
+  <% else %>
+    <input type="radio" name="verify<%= traloi.id %>" value="yes"/>Đúng<br/>
+    <input type="radio" name="verify<%= traloi.id %>" value="no"/>Sai
+  <% end %>
 </div>
 <script>
   $(document).ready(function() {

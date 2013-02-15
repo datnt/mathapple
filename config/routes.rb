@@ -75,5 +75,8 @@ Mathapple::Application.routes.draw do
   resources :loai_cau_hois do
   end
   resources :cham_bais do
+    collection do
+      get :danhgia
+    end
   end
 end
