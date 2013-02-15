@@ -1,13 +1,14 @@
 <div style="margin-top:65px;" class="row">
   <div class="row">
     <div class="span4">
-      <img src="images/flashcards-icon.png" alt="Flashcards Icon">
+      <img src="/images/flashcards-icon.png" alt="Flashcards Icon">
       <br>
       <a href="#" class="btn large success">Danh mục bài thi</a>
     </div>
     <div class="span8">
       <% @ketquas.each do |k| %>
-        <%= HocSinh.find(k.hoc_sinh_id).ten %>
+        
+        <a href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
       <% end %>
     </div>
 

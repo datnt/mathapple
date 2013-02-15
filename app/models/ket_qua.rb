@@ -3,4 +3,6 @@ class KetQua < ActiveRecord::Base
   belongs_to :bai_tap
 
   has_many :tra_lois
+
+
 end
