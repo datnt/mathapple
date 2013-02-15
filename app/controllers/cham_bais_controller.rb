@@ -4,16 +4,6 @@ class ChamBaisController < ApplicationController
     @tralois = k.tra_lois
   end
   def danhgia
-    puts "=="
-    puts "=="
-    puts "=="
-    puts "=="
-    puts "=="
-    puts "=="
-    puts "=="
-    puts "=="
-    puts " v1= #{params[:id]}"
-    puts " v2= #{params[:id_tra_loi]}"
     t = TraLoi.find(params[:id_tra_loi])
     if params[:id] == "yes"
       t.dapan = "yes"
