@@ -42,17 +42,29 @@ class AppManagersController < ApplicationController
     @baitap = BaiTap.find(session[:current_baitap])
     @hocsinh = HocSinh.find(session[:current_user])
     traloi = TraLoi.create(params[:tra_loi])
+    loaicauhoi = @baitap.loai_cau_hois.where(:id => traloi.loai_cau_hoi_id).first
+    current_index = @baitap.loai_cau_hois.index(loaicauhoi)
+    session[:next_cauhoi_index] = current_index + 1
     redirect_to :action => "tiep_theo"
   end
   def tiep_theo
     @baitap = BaiTap.find(session[:current_baitap])
     @hocsinh = HocSinh.find(session[:current_user])
     @traloi = TraLoi.new
-    @cauhoi = @baitap.loai_cau_hois.first
-    @traloi.loai_cau_hoi_id = @baitap.loai_cau_hois.first.id
-    @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
-    @ketqua = KetQua.find(session[:current_ketqua])
+    @cauhoi = @baitap.loai_cau_hois.at(session[:next_cauhoi_index])
+    if @cauhoi != nil
+    
+      @traloi.loai_cau_hoi_id =@cauhoi.id
+      @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
+      @ketqua = KetQua.find(session[:current_ketqua])
+      render :action => "lambai"
+    else
+      render :action => "ketthuc"
+    end
 
-    render :action => "lambai"
+    
+  end
+  def ketthuc
+    
   end
 end
