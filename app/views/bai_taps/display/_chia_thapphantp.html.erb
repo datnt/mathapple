@@ -1,15 +1,3 @@
-<%= form_for(@cauhoi, :url => luu_chiatptp_bai_taps_path , :html => {:multipart => false, :id => "form_cau_hoi" }, :method => :post) do |f| %>
-  <input name="id" type="hidden" value="<%= @baitap.id %>" id="id_bai_tap"/>
-  <input name="id_cau_hoi" type="hidden" value="<%= @cate.id %>" id="id_bai_tap"/>
+<label><h1>Câu hỏi:</h1><h2><%= pheptinh.cau_hoi %></h2></label>
 
-  <%= f.label "Câu hỏi" %>
-  <%= f.text_field :cau_hoi %>
-  <%= f.label "Số thập phân thứ nhất" %>
-  <%= f.text_field :so_a %>
-  <%= f.label "Số thập phân thứ hai" %>
-  <%= f.text_field :so_b %>
-  <%= f.label "Kết quả" %>
-  <%= f.text_field :ketqua %>
-  <div class="page-header"></div>
-  <%= f.submit "Khởi tạo" %>
-<% end %>
+<label style="font-size: 38px;"><%= pheptinh.so_a %>&nbsp; chia &nbsp;<%= pheptinh.so_b %> = ? </label>
