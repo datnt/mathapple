@@ -8,4 +8,6 @@ class AppManagersController < ApplicationController
   def mucluc
     @baitaps = BaiTap.find(:all)
   end
+  def reception
+  end
 end
