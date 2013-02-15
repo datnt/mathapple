@@ -49,7 +49,7 @@
   when "TiSoPhanTram"
     render :partial => "/bai_taps/grid_item/tisophantram", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "TruPhanSo"
-    render :partial => "/bai_taps/grid_item/truphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+    render :partial => "/bai_taps/display/truphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "TruThapPhan"
     render :partial => "/bai_taps/grid_item/trutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   else "error; co loi"
