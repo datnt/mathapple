@@ -76,7 +76,7 @@ Mathapple::Application.routes.draw do
   end
   resources :cham_bais do
     collection do
-      get :danhgia
+      get :danhgia, :ketthuc
     end
   end
 end

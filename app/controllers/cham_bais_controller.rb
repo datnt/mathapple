@@ -1,7 +1,7 @@
 class ChamBaisController < ApplicationController
   def show
-    k = KetQua.find(params[:id])
-    @tralois = k.tra_lois
+    @ketqua = KetQua.find(params[:id])
+    @tralois = @ketqua.tra_lois
   end
   def danhgia
     t = TraLoi.find(params[:id_tra_loi])
@@ -13,5 +13,8 @@ class ChamBaisController < ApplicationController
       t.save
     end
     render :text => "..."
+  end
+  def ketthuc
+    @baitap = BaiTap.find(params[:id])
   end
 end
