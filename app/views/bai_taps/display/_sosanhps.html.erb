@@ -1,15 +1,31 @@
-<%= form_for(@cauhoi, :url => luu_sosanhps_bai_taps_path , :html => {:multipart => false, :id => "form_cau_hoi" }, :method => :post) do |f| %>
-  <input name="id" type="hidden" value="<%= @baitap.id %>" id="id_bai_tap"/>
-  <input name="id_cau_hoi" type="hidden" value="<%= @cate.id %>" id="id_bai_tap"/>
+<label><h1>Câu hỏi:</h1><h2><%= pheptinh.cau_hoi %></h2></label>
 
-  <%= f.label "Câu hỏi" %>
-  <%= f.text_field :cau_hoi %>
-  <%= f.label "Số thứ nhất" %>
-  <%= f.text_field :phanso_a %>
-  <%= f.label "Số thứ hai" %>
-  <%= f.text_field :phanso_b %>
-  <%= f.label "Kết quả (dấu >, < hoặc =)" %>
-  <%= f.text_field :ketqua %>
-  <div class="page-header"></div>
-  <%= f.submit "Khởi tạo" %>
-<% end %>
+<div>
+  <% a=pheptinh.phanso_a
+  a1=a.split('/')[0]
+  a2=a.split('/')[1]
+%>
+  <% b=pheptinh.phanso_b
+  b1=b.split('/')[0]
+  b2=b.split('/')[1]
+%>
+
+</div>
+<table style="font-size: 40px;">
+  <tr>
+    <td>
+      <div style="border-bottom: 3px solid black; width: 60px; margin: 18px; padding: 10px;"> <%= a1 %> </div>
+      <div style="padding: 10px; margin-left: 18px;"> <%= a2 %> </div>
+
+    </td>
+    <td>
+      ?
+
+    </td>
+    <td>
+      <div style="border-bottom: 3px solid black; width: 60px; margin: 18px; padding: 10px;"> <%= b1 %> </div>
+      <div style="padding: 10px; margin-left: 18px;"> <%= b2 %> </div>
+
+    </td>
+  </tr>
+</table>
