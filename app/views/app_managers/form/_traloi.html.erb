@@ -4,7 +4,6 @@
   <%= f.text_field :ket_qua_id, :value => @ketqua.id , :type => "hidden" %>
 
   <% c=@cauhoi %>
-
   <%=
   case c.content.to_s
   when "PhepCong"
@@ -42,7 +41,7 @@
   when "NhanThapPhanTuNhien"
     render :partial => "/bai_taps/grid_item/nhantptn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "PhanSoThapPhan"
-    render :partial => "/bai_taps/grid_item/phansotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+    render :partial => "/bai_taps/display/phansotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "SoSanhPhanSo"
     render :partial => "/bai_taps/display/sosanhps", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "ThapPhanVaTong"
