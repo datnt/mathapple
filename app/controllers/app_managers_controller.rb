@@ -72,7 +72,7 @@ class AppManagersController < ApplicationController
     
   end
   def review
-    @baitap = BaiTap.find(session[:current_baitap])
+    @baitap = BaiTap.find(params[:id])
     @ketquas = KetQua.where(:bai_tap_id => @baitap.id)
   end
 end
