@@ -16,5 +16,16 @@ class ChamBaisController < ApplicationController
   end
   def ketthuc
     @baitap = BaiTap.find(params[:id])
+    @ketqua = KetQua.find(params[:kq])
+
+    ya = @ketqua.tra_lois.where(:dapan => "yes")
+    ids = ya.map(&:id)
+    wrong = @ketqua.tra_lois.select { |c| !ids.include?(c.id) }
+
+    @right = ya.size
+    @wrong = wrong.size
+
+
+
   end
 end
