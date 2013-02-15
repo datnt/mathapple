@@ -32,8 +32,7 @@
               <%= t.noidung %>
             </td>
             <td>
-              Đúng / Sai
-              <%= render :partial => "/cham_bais/box/cham" %>
+              <%= render :partial => "/cham_bais/box/cham", :locals => {:traloi => t} %>
             </td>
 
           </tr>
@@ -45,3 +44,8 @@
     </div>
   </div>
 </div>
+<script>
+  function DanhGia(v, id){
+    alert('v == '+id);
+  }
+</script>
