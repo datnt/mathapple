@@ -31,7 +31,7 @@
   when "HonSo"
     render :partial => "/bai_taps/display/honso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "HonSoThapPhan"
-    render :partial => "/bai_taps/grid_item/honsotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+    render :partial => "/bai_taps/display/honsotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "NhanPhanso"
     render :partial => "/bai_taps/display/nhanphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
   when "NhanThapPhan10K"
