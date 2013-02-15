@@ -3,66 +3,63 @@
   <%= f.text_field :loai_cau_hoi_id, :type => "hidden" %>
   <%= f.text_field :ket_qua_id, :value => @ketqua.id , :type => "hidden" %>
 
-  <%= f.label "Câu hỏi" %>
+  <% c=@cauhoi %>
 
-  <%= eval(@cauhoi.content).where(:loai_cau_hoi_id => @cauhoi.id).first.cau_hoi  %>
-<% c=@cauhoi %>
-
-<%=
-case c.content.to_s
-when "PhepCong"
-  render :partial => "/bai_taps/grid_item/phep_cong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-#when "PhepChia"
-  #render :partial => "/bai_taps/form/phep_chia"
-when "ChiaPhanso"
-  render :partial => "/bai_taps/grid_item/chia_phanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ChiaThapPhan10K"
-  render :partial => "/bai_taps/grid_item/chia_thapphan10k", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ChiaThapPhanTp"
-  render :partial => "/bai_taps/grid_item/chia_thapphantp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ChiaThapPhanTuNhien"
-  render :partial => "/bai_taps/grid_item/chia_thapphantn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ChiaTnThapPhan"
-  render :partial => "/bai_taps/grid_item/chia_tnthapphan", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ChiaTnTnThapPhan"
-  render :partial => "/bai_taps/grid_item/chia_tntnthapphan", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "CongNhieuThapPhan"
-  render :partial => "/bai_taps/grid_item/congnhieutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "CongPhanSo"
-  render :partial => "/bai_taps/grid_item/congphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "Dodai"
-  render :partial => "/bai_taps/grid_item/dodai", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "HonSo"
-  render :partial => "/bai_taps/grid_item/honso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "HonSoThapPhan"
-  render :partial => "/bai_taps/grid_item/honsotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "NhanPhanso"
-  render :partial => "/bai_taps/grid_item/nhanphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "NhanThapPhan10K"
-  render :partial => "/bai_taps/grid_item/nhantp10k", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "NhanThapPhanThapPhan"
-  render :partial => "/bai_taps/grid_item/nhantptp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "NhanThapPhanTuNhien"
-  render :partial => "/bai_taps/grid_item/nhantptn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "PhanSoThapPhan"
-  render :partial => "/bai_taps/grid_item/phansotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "SoSanhPhanSo"
-  render :partial => "/bai_taps/grid_item/sosanhps", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "ThapPhanVaTong"
-  render :partial => "/bai_taps/grid_item/thapphantong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "TiSoPhanTram"
-  render :partial => "/bai_taps/grid_item/tisophantram", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "TruPhanSo"
-  render :partial => "/bai_taps/grid_item/truphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-when "TruThapPhan"
-  render :partial => "/bai_taps/grid_item/trutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
-else "error; co loi"
-end
+  <%=
+  case c.content.to_s
+  when "PhepCong"
+    render :partial => "/bai_taps/display/phep_cong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+    #when "PhepChia"
+    #render :partial => "/bai_taps/form/phep_chia"
+  when "ChiaPhanso"
+    render :partial => "/bai_taps/grid_item/chia_phanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ChiaThapPhan10K"
+    render :partial => "/bai_taps/grid_item/chia_thapphan10k", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ChiaThapPhanTp"
+    render :partial => "/bai_taps/grid_item/chia_thapphantp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ChiaThapPhanTuNhien"
+    render :partial => "/bai_taps/grid_item/chia_thapphantn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ChiaTnThapPhan"
+    render :partial => "/bai_taps/grid_item/chia_tnthapphan", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ChiaTnTnThapPhan"
+    render :partial => "/bai_taps/grid_item/chia_tntnthapphan", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "CongNhieuThapPhan"
+    render :partial => "/bai_taps/grid_item/congnhieutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "CongPhanSo"
+    render :partial => "/bai_taps/grid_item/congphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "Dodai"
+    render :partial => "/bai_taps/grid_item/dodai", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "HonSo"
+    render :partial => "/bai_taps/grid_item/honso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "HonSoThapPhan"
+    render :partial => "/bai_taps/grid_item/honsotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "NhanPhanso"
+    render :partial => "/bai_taps/grid_item/nhanphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "NhanThapPhan10K"
+    render :partial => "/bai_taps/grid_item/nhantp10k", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "NhanThapPhanThapPhan"
+    render :partial => "/bai_taps/grid_item/nhantptp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "NhanThapPhanTuNhien"
+    render :partial => "/bai_taps/grid_item/nhantptn", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "PhanSoThapPhan"
+    render :partial => "/bai_taps/grid_item/phansotp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "SoSanhPhanSo"
+    render :partial => "/bai_taps/grid_item/sosanhps", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "ThapPhanVaTong"
+    render :partial => "/bai_taps/grid_item/thapphantong", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "TiSoPhanTram"
+    render :partial => "/bai_taps/grid_item/tisophantram", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "TruPhanSo"
+    render :partial => "/bai_taps/grid_item/truphanso", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  when "TruThapPhan"
+    render :partial => "/bai_taps/grid_item/trutp", :locals => { :pheptinh => eval(c.content).where(:loai_cau_hoi_id => c.id).first }
+  else "error; co loi"
+  end
 %>
 
 
 
-  <%= f.label "Trả lời" %>
+  <h1>Trả lời</h1>
   <%= f.text_field :noidung %>
   <div class="page-header"></div>
   <%= f.submit "Lưu lại" %>
