@@ -24,6 +24,7 @@ class ChamBaisController < ApplicationController
 
     @right = ya.size
     @wrong = wrong.size
+    @hocsinh = HocSinh.find(@ketqua.hoc_sinh_id)
 
 
 

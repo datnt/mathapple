@@ -1,5 +1,51 @@
-<%= @baitap.name %>
-<br/><%= @ketqua.id %>
-Đúng: <%= @right %><br/>
-Sai: <%= @wrong %><br/>
-<canvas id="foo" width="200" height="100"></canvas>
+<div style="margin-top:65px;" class="row">
+  <div class="row">
+    <div class="span4">
+      <img src="/images/flashcards-icon.png" alt="Flashcards Icon">
+      <br>
+    </div>
+    <div class="span8">
+      
+      
+      
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <td><h1><%= @baitap.name %></h1></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h3>Đúng</h3>
+            </td>
+            <td>
+              <h3><%= @right %></h3><br/>
+            </td>
+             
+          </tr>
+          <tr>
+            <td><h3>Sai</h3></td>
+            <td><h3><%= @wrong %></h3><br/></td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Mức độ làm bài của thí sinh: <%= @hocsinh.ten %></h3>
+            </td>
+            <td>
+
+              <canvas id="foo" width="200" height="100"></canvas>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+
+
+    </div>
+  </div>
+</div>
