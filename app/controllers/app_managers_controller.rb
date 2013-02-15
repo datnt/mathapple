@@ -36,7 +36,11 @@ class AppManagersController < ApplicationController
     else
       @ketqua = KetQua.where(:bai_tap_id => @baitap.id,  :hoc_sinh_id => @hocsinh.id).first
       session[:current_ketqua] = @ketqua.id
+      redirect_to :action => "da_lam_roi"
     end
+  end
+  def da_lam_roi
+    
   end
   def luu_traloi
     @baitap = BaiTap.find(session[:current_baitap])
