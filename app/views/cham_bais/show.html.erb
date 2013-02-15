@@ -1,3 +1,46 @@
-<% @tralois.each do |t| %>
-<%= t.noidung %><br/>
-<% end %>
+<div style="margin-top:65px;" class="row">
+  <div class="row">
+    <div class="span4">
+      <img src="/images/flashcards-icon.png" alt="Flashcards Icon">
+      <br>
+      <a href="#" class="btn large success">Danh mục bài thi</a>
+    </div>
+    <div class="span8">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>
+              Câu Hỏi
+            </td>
+            <td>
+              Câu trả lời
+            </td>
+            <td>
+              Chấm
+            </td>
+          </tr>
+        </thead>
+
+        <% @tralois.each do |t| %>
+          <tr>
+            <td>
+              <% c = LoaiCauHoi.find(t.loai_cau_hoi_id) %>
+              <%= eval(c.content).where(:loai_cau_hoi_id => c.id).first.cau_hoi %>
+            </td>
+
+            <td>
+              <%= t.noidung %>
+            </td>
+            <td>
+              Đúng / Sai
+            </td>
+
+          </tr>
+        <% end %>
+
+      </table>
+
+
+    </div>
+  </div>
+</div>
