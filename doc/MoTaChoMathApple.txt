@@ -47,6 +47,19 @@ ch.Baithi = bt
 pc PhepCong.new 
 pc.CauHoi = ch
 pc.save
+==========================================================MODULE 2 QUAN LY CAU TRA LOI, DAP AN
+tao ra model ten la HOCSINH(mahocsinh-unique, tenhocsinh)
+tao ra model KETQUA, KETQUA co COMPOSITE KEY la hocsinh id va baitapid
+KETQUA co the ti`m thay duy nhat thong quan: KETQUA.where(:hocsinh_id => hsid, :baitapid => btid)
+1 KETQUA co nhieu cau tra loi,
+tao ra model CAUTRALOI belongs to KETQUA,
+CAUTRALOI co cac thuoc tinh sau: noidung, dapan(noi dung tuc la cau tra loi cua hoc sinh, dap an la` DUNG HOAC SAI do giaovien)
+
+CAUTRALOI dong thoi co' column: loai_cau_hoi id, de tham chieu den id cua cau hoi na`o ma` cau tra loi da`nh cho
+
+GUI : tren giao dien, lu'c user nhan nut lam bai, se co 2 options, 
+1> tao HOCSINH MOI
+2> nhap vao ma hoc sinh de bat dau lam bai
 
 
 ==========================================================GIAO DIEN THAM KHAO

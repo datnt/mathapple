@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212082813) do
+ActiveRecord::Schema.define(:version => 20130215020947) do
 
   create_table "bai_taps", :force => true do |t|
     t.string   "name"
@@ -120,6 +120,14 @@ ActiveRecord::Schema.define(:version => 20130212082813) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "hoc_sinhs", :force => true do |t|
+    t.string   "ten"
+    t.string   "khoi_lop"
+    t.string   "mahocsinh"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "hon_so_thap_phans", :force => true do |t|
     t.string   "cau_hoi"
     t.string   "songuyen"
@@ -136,6 +144,13 @@ ActiveRecord::Schema.define(:version => 20130212082813) do
     t.string   "phanso_a"
     t.string   "ketqua"
     t.integer  "loai_cau_hoi_id", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "ket_quas", :force => true do |t|
+    t.integer  "loai_cau_hoi_id", :null => false
+    t.integer  "hoc_sinh_id",     :null => false
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
@@ -242,6 +257,15 @@ ActiveRecord::Schema.define(:version => 20130212082813) do
     t.string   "so_b"
     t.string   "ketqua"
     t.integer  "loai_cau_hoi_id", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "tra_lois", :force => true do |t|
+    t.integer  "ket_qua_id",      :null => false
+    t.integer  "loai_cau_hoi_id", :null => false
+    t.string   "noidung"
+    t.string   "dapan"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
