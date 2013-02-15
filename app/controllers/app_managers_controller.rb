@@ -27,5 +27,32 @@ class AppManagersController < ApplicationController
   def lambai
     @baitap = BaiTap.find(session[:current_baitap])
     @hocsinh = HocSinh.find(session[:current_user])
+    @traloi = TraLoi.new
+    @cauhoi = @baitap.loai_cau_hois.first
+    @traloi.loai_cau_hoi_id = @baitap.loai_cau_hois.first.id
+    if KetQua.where(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id).size == 0
+      @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
+      session[:current_ketqua] = @ketqua.id
+    else
+      @ketqua = KetQua.where(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id).first
+      session[:current_ketqua] = @ketqua.id
+    end
+  end
+  def luu_traloi
+    @baitap = BaiTap.find(session[:current_baitap])
+    @hocsinh = HocSinh.find(session[:current_user])
+    traloi = TraLoi.create(params[:tra_loi])
+    redirect_to :action => "tiep_theo"
+  end
+  def tiep_theo
+    @baitap = BaiTap.find(session[:current_baitap])
+    @hocsinh = HocSinh.find(session[:current_user])
+    @traloi = TraLoi.new
+    @cauhoi = @baitap.loai_cau_hois.first
+    @traloi.loai_cau_hoi_id = @baitap.loai_cau_hois.first.id
+    @ketqua = KetQua.create(:loai_cau_hoi_id => @cauhoi.id,  :hoc_sinh_id => @hocsinh.id)
+    @ketqua = KetQua.find(session[:current_ketqua])
+
+    render :action => "lambai"
   end
 end

@@ -1,0 +1,12 @@
+<%= form_for(@traloi, :url => luu_traloi_app_managers_path , :html => {:multipart => false, :id => "form_newhs" }, :method => :post) do |f| %>
+
+  <%= f.text_field :loai_cau_hoi_id, :type => "hidden" %>
+  <%= f.text_field :ket_qua_id, :value => @ketqua.id , :type => "hidden" %>
+
+  <%= f.label "Câu hỏi" %>
+  <%= eval(@cauhoi.content).where(:loai_cau_hoi_id => @cauhoi.id).first.cau_hoi  %>
+  <%= f.label "Trả lời" %>
+  <%= f.text_field :noidung %>
+  <div class="page-header"></div>
+  <%= f.submit "Lưu lại" %>
+<% end %>

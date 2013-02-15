@@ -9,6 +9,9 @@
       <h1>Bài khảo sát: <%= @baitap.name %></h1>
       Mã Học sinh: <%= @hocsinh.mahocsinh %><br/>
       Tên Học sinh: <%= @hocsinh.ten %>
+      <div>
+        <%= render :partial => "/app_managers/form/traloi" %>
+      </div>
     </div>
   </div>
 </div>
