@@ -59,6 +59,7 @@ Mathapple::Application.routes.draw do
   resources :app_managers do
     collection do
       get  :danh_muc, :mucluc, :reception
+      post :xulymahs, :newhs
     end
   end
   resources :bai_taps do

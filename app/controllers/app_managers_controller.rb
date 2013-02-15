@@ -9,5 +9,13 @@ class AppManagersController < ApplicationController
     @baitaps = BaiTap.find(:all)
   end
   def reception
+    @hocsinh = HocSinh.new
+    @hocsinh.mahocsinh = SecureRandom.hex(3)
+  end
+  def xulymahs
+    
+  end
+  def newhs
+    
   end
 end
