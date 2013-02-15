@@ -1,26 +1,25 @@
-<%= form_for(@cauhoi, :url => luu_dodai_bai_taps_path , :html => {:multipart => false, :id => "form_cau_hoi" }, :method => :post) do |f| %>
-  <input name="id" type="hidden" value="<%= @baitap.id %>" id="id_bai_tap"/>
-  <input name="id_cau_hoi" type="hidden" value="<%= @cate.id %>" id="id_bai_tap"/>
+<label><h1>Câu hỏi:</h1><h2><%= pheptinh.cau_hoi %></h2></label>
 
-  <%= f.label "Câu hỏi" %>
-  <%= f.text_field :cau_hoi %>
+<%
+a1=pheptinh.so_a
+a2=pheptinh.donvi_a
+b1=pheptinh.so_b
+b2=pheptinh.donvi_b
+%>
+<table style="font-size: 40px;">
+  <tr>
+    <td>
+      <%= a1 %> 
+      <%= a2 %> 
 
-  <%= f.label "Số thứ nhất" %>
-  <%= f.text_field :so_a %>
+    </td>
+    <td>
 
-  <%= f.label "Đơn vị" %>
-  <%= f.text_field :donvi_a %>
+    </td>
+    <td>
+      <%= b1 %> 
+      <%= b2 %> 
 
-
-  <%= f.label "Số thứ hai" %>
-  <%= f.text_field :so_b %>
-
-  <%= f.label "Đơn vị" %>
-  <%= f.text_field :donvi_b %>
-
-
-  <%= f.label "Kết quả" %>
-  <%= f.text_field :ketqua %>
-  <div class="page-header"></div>
-  <%= f.submit "Khởi tạo" %>
-<% end %>
+    </td>
+  </tr>
+</table>
