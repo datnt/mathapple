@@ -11,6 +11,7 @@ class AppManagersController < ApplicationController
   def reception
     @hocsinh = HocSinh.new
     @hocsinh.mahocsinh = SecureRandom.hex(3)
+    @baitap = BaiTap.find(params[:id])
   end
   def xulymahs
     @hocsinh = HocSinh.find_by_mahocsinh(params[:mahocsinh])

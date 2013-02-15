@@ -6,32 +6,35 @@
       <a href="#" class="btn large success">Danh mục bài thi</a>
     </div>
     <div class="span8">
-        <div class="row">
-          Mã thí sinh (nếu đã có):
+      <div class="row">
+        <h1>Bài khảo sát: <%= @baitap.name %></h1>
+      </div>
+      <div class="row">
+        Mã thí sinh (nếu đã có):
 
-          <%= form_tag xulymahs_app_managers_path, :remote => false, :id => "form_add_mahs" do %>
-            <%= text_field_tag 'mahocsinh', nil, :id => "mahocsinh" %>
-            <%= submit_tag "Bắt đầu", :id => "sbm_btn" %><br/>
-          <% end %>
+        <%= form_tag xulymahs_app_managers_path, :remote => false, :id => "form_add_mahs" do %>
+          <%= text_field_tag 'mahocsinh', nil, :id => "mahocsinh" %>
+          <%= submit_tag "Bắt đầu", :id => "sbm_btn" %><br/>
+        <% end %>
 
-        </div>
-        <div class="row">
-          Nếu chưa có mã thí sinh, nhập họ và tên để bắt đầu:
-
-
+      </div>
+      <div class="row">
+        Nếu chưa có mã thí sinh, nhập họ và tên để bắt đầu:
 
 
-          <%= form_for(@hocsinh, :url => newhs_app_managers_path , :html => {:multipart => false, :id => "form_newhs" }, :method => :post) do |f| %>
 
-            <%= f.text_field :mahocsinh, :type => "hidden" %>
 
-            <%= f.label "Họ và Tên" %>
-            <%= f.text_field :ten %>
-            <div class="page-header"></div>
-            <%= f.submit "Khởi tạo" %>
-          <% end %>
+        <%= form_for(@hocsinh, :url => newhs_app_managers_path , :html => {:multipart => false, :id => "form_newhs" }, :method => :post) do |f| %>
 
-        </div>
+          <%= f.text_field :mahocsinh, :type => "hidden" %>
+
+          <%= f.label "Họ và Tên" %>
+          <%= f.text_field :ten %>
+          <div class="page-header"></div>
+          <%= f.submit "Khởi tạo" %>
+        <% end %>
+
+      </div>
 
 
     </div>

@@ -12,7 +12,7 @@
     <div class="page-header">
       <h4><%= bt.description %><small></small></h4>
       <div>
-        <a href="<%= reception_app_managers_path %>" class="btn btn-danger">Làm Bài</a>
+        <a href="<%= reception_app_managers_path(:id => bt.id) %>" class="btn btn-danger">Làm Bài</a>
         <a class="btn btn-info" href="<%= bai_tap_path(:id => bt.id) %>">Quản lý Câu hỏi</a>
       </div>
     </div>
