@@ -2,13 +2,22 @@
   <div class="row">
     <div class="span4">
       <img src="/images/flashcards-icon.png" alt="Flashcards Icon">
-      <br>
-      <a href="#" class="btn large success">Danh mục bài thi</a>
     </div>
     <div class ="span8">
-      <h1>Bài khảo sát: <%= @baitap.name %></h1>
-      Mã Học sinh: <%= @hocsinh.mahocsinh %><br/>
-      Tên Học sinh: <%= @hocsinh.ten %>
+      <table class="table">
+        <tr>
+          <td><h1>Bài khảo sát: <%= @baitap.name %></h1></td>
+        </tr>
+        <tr>
+          <td><h3>Mã Học sinh </h3></td>
+          <td><h3> <%= @hocsinh.mahocsinh %></h3></td>
+        </tr>
+        <tr>
+          <td><h3>Tên Học sinh</h3></td>
+          <td><h3> <%= @hocsinh.ten %></h3></td>
+        </tr>
+      </table>
+      
       <div>
         <%= render :partial => "/app_managers/form/traloi" %>
       </div>
