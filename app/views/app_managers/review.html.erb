@@ -1,14 +1,19 @@
 <div style="margin-top:65px;" class="row">
   <div class="row">
     <div class="span4">
-      <img src="/images/flashcards-icon.png" alt="Flashcards Icon">
+      <img src="/images/chambai.jpg" alt="Flashcards Icon">
       <br>
     </div>
     <div class="span8">
-      <% @ketquas.each do |k| %>
-        
-        <a href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
-      <% end %>
+      <table class="table">
+        <% @ketquas.each do |k| %>
+          <tr>
+            <td>
+              <a href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
+            </td>
+          </tr>
+        <% end %>
+      </table>
     </div>
 
   </div>
