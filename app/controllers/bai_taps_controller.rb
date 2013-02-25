@@ -14,6 +14,14 @@ class BaiTapsController < ApplicationController
     end
 
   end
+  def edit
+    @baitap = BaiTap.find(params[:id])
+  end
+  def update
+    @baitap = BaiTap.find(params[:id])
+    @baitap.update_attributes(params[:bai_tap])
+    redirect_to mucluc_app_managers_path
+  end
 
   def show
     @baitap = BaiTap.find(params[:id])
