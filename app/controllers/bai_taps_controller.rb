@@ -362,6 +362,16 @@ class BaiTapsController < ApplicationController
     redirect_to bai_tap_path(:id => @baitap.id)
   end
 
+  def xoa_cau_hoi
+    c = LoaiCauHoi.find(params[:xoa_id])
+    obj = eval(c.content).where(:loai_cau_hoi_id => c.id).first
+    tra = TraLoi.where(:loai_cau_hoi_id => c.id).first
+    obj.destroy
+    tra.destroy
+    c.destroy
+    redirect_to bai_tap_path(:id => params[:id])
+  end
+
 
 
 
