@@ -375,7 +375,9 @@ class BaiTapsController < ApplicationController
     obj = eval(c.content).where(:loai_cau_hoi_id => c.id).first
     tra = TraLoi.where(:loai_cau_hoi_id => c.id).first
     obj.destroy
-    tra.destroy
+    if tra != nil
+      tra.destroy
+    end 
     c.destroy
     redirect_to bai_tap_path(:id => params[:id])
   end
