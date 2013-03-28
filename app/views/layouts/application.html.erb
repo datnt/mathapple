@@ -7,29 +7,39 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="<%= root_url %>">Toán thật vui</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="<%= mucluc_app_managers_path %>">Mục lục</a></li>
-              <li><a href="<%= new_bai_tap_path %>">Tạo bài kiểm tra</a></li>
-              <%#*<li><a href="#contact">Giới thiệu</a></li>%>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+  <style  type="text/css">
+    ul.nav{
+      font-size: 30px;
+      height: 40px;
+      padding-top: 6px;
+    }
+    a.brand{
+      font-size: 30px;
+      height: 40px;
+    }
+  </style>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="<%= root_url %>" style="font-size: 30px;">Toán thật vui</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="<%= mucluc_app_managers_path %>">Mục lục</a></li>
+            <li><a href="<%= new_bai_tap_path %>">Tạo bài kiểm tra</a></li>
+<%#*<li><a href="#contact">Giới thiệu</a></li>%>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div class="container">
-      <%= yield %>
-    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
 
-  </body>
+</body>
 </html>
