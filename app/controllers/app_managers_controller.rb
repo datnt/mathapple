@@ -25,13 +25,16 @@ class AppManagersController < ApplicationController
     redirect_to :action => "lambai"
   end
   def xoa_ketqua
-    kq = KetQua.find(params[:id])
-    if kq.tra_lois.size > 0
-      kq.tra_lois.each do |t|
-        t.destroy
+    kq = KetQua.find_by_id(params[:id])
+    if kq != nil
+      if kq.tra_lois.size > 0
+        kq.tra_lois.each do |t|
+          t.destroy
+        end
       end
+      kq.destroy
     end
-    kq.destroy
+    
     redirect_to review_app_managers_path(:id => params[:batap_id])
   end
   
