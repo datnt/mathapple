@@ -11,6 +11,9 @@
             <td>
               <a style="font-size: 30px; line-height: 40px;" href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
             </td>
+            <td>
+              <a style="font-size: 30px; line-height: 40px;" href="<%= xoa_ketqua_app_managers_path(:id => k.id, :batap_id => @baitap.id) %>" class="btn large success">Xóa Kết Quả</a>
+            </td>
           </tr>
         <% end %>
       </table>
