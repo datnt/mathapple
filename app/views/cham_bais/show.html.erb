@@ -86,13 +86,13 @@ end
 
             </td>
 
-            <td>
+            <td style="font-size: 30px; line-height: 40px;">
               <%= t.noidung %>
             </td>
-            <td>
+            <td style="font-size: 30px; line-height: 40px;">
               <%= eval(c.content).where(:loai_cau_hoi_id => c.id).first.ketqua %>
             </td>
-            <td>
+            <td style="font-size: 30px; line-height: 40px;">
               <%= render :partial => "/cham_bais/box/cham", :locals => {:traloi => t} %>
             </td>
 
