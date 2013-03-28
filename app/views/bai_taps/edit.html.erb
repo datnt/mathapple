@@ -1,0 +1,36 @@
+<style  type="text/css">
+  form table{
+    font-size: 30px;
+    
+  }
+  form#school_admin input {
+    height: 40px;
+    font-size: 30px;
+    width: 432px;
+  }
+  form#school_admin textarea {
+    font-size: 30px;
+    width: 432px;
+  }
+</style>
+<div style="margin-top:65px;" class="row">
+  <div class="row">
+    <div class="span4">
+      <img src="/images/blackboard.jpg" alt="Flashcards Icon">
+      <br>
+    </div>
+    <div class="span8">
+<%#= form_for(@baitap, :action => bai_tap_path, :html => { :multipart => false }) do |f| %>
+      <%= form_for(@baitap, :url => bai_tap_path , :html => {:multipart => false, :id => "school_admin" }, :method => :put) do |f| %>
+        <table  class="table">
+          <tr><td style="line-height: 30px;"><div>Tên bài kiểm tra</div></td><td><%= f.text_field :name %></td></tr>
+          <tr><td style="line-height: 30px;">Mô tả nội dung bài kiểm tra</td><td><%= f.text_area :description %></td></tr>
+        </table>
+        <%= f.submit 'Khởi tạo' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
