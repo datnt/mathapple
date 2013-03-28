@@ -1,14 +1,14 @@
 <div class="appInfo">
-  <h1 id="contact">Câu hỏi mới cho <small><%= @baitap.name %></small></h1>
+  <h1 id="contact">Câu hỏi mới cho: <%= @baitap.name %></h1>
 
 <%#= form_for(@cauhoi, :url => luu_cau_hoi_bai_taps_path , :html => {:multipart => false, :id => "form_cau_hoi" }, :method => :post) do |f| %>
-  <table class="table">
+  <table class="table" style="font-size: 24px;">
     <tr>
       <td>
         Loại câu hỏi
       </td>
       <td>
-        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => true}, :class => "span3", :id => "chon_cau_hoi") %>
+        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => true}, :class => "span3", :style => "font-size: 24px;", :id => "chon_cau_hoi") %>
       </td>
     </tr>
   </table>
