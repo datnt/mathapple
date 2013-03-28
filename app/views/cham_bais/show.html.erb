@@ -7,7 +7,7 @@
     <div class="span8">
       <table class="table">
         <thead>
-          <tr>
+          <tr style="font-size: 30px; line-height: 40px;">
             <td>
               Câu Hỏi
             </td>
@@ -25,7 +25,7 @@
 
         <% @tralois.each do |t| %>
           <tr>
-            <td>
+            <td style="font-size: 30px; line-height: 40px;">
               <% c = LoaiCauHoi.find(t.loai_cau_hoi_id) %>
               <%#= eval(c.content).where(:loai_cau_hoi_id => c.id).first.cau_hoi %>
 
@@ -100,7 +100,7 @@ end
         <% end %>
 
       </table>
-      <a class="btn btn-success" href="<%= ketthuc_cham_bais_path(:id => @ketqua.bai_tap_id, :kq => @ketqua.id) %>">Kết thúc</a>
+      <a class="btn btn-success" style="font-size: 30px; line-height: 40px;" href="<%= ketthuc_cham_bais_path(:id => @ketqua.bai_tap_id, :kq => @ketqua.id) %>">Kết thúc</a>
     </div>
   </div>
 </div>
