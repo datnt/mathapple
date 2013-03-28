@@ -9,7 +9,7 @@
         <% @ketquas.each do |k| %>
           <tr>
             <td>
-              <a href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
+              <a style="font-size: 30px; line-height: 40px;" href="<%= cham_bai_path(:id => k.id) %>" class="btn large success"><%= HocSinh.find(k.hoc_sinh_id).ten %></a>
             </td>
           </tr>
         <% end %>
