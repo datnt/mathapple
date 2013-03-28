@@ -4,10 +4,10 @@
   </div>
   <div class="alert alert-info">Nội dung: <%= @baitap.description %>
   </div>
-  <h5>Hiện có</h5> <h3><%= @baitap.loai_cau_hois.size %></h3> câu hỏi
+  <h5 style="font-size: 30px; line-height: 40px;">Hiện có</h5> <h3 style="font-size: 30px; line-height: 40px;"><%= @baitap.loai_cau_hois.size %></h3> câu hỏi
 
   <div>
-    <a class="btn btn-success" href="<%= them_cau_hoi_bai_taps_path(:id => @baitap.id) %>">Thêm câu hỏi</a>
+    <a class="btn btn-success" style="font-size: 30px; line-height: 40px; padding: 5px;" href="<%= them_cau_hoi_bai_taps_path(:id => @baitap.id) %>">Thêm câu hỏi</a>
   </div>
 
   <div class="page-header">
