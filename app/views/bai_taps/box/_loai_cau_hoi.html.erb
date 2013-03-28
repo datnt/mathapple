@@ -8,7 +8,7 @@
         Loại câu hỏi
       </td>
       <td>
-        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => true}, :class => "span3", :style => "font-size: 24px;", :id => "chon_cau_hoi") %>
+        <%= select("loai_cau_hoi", "cau_hoi", Category.all.collect {|p| [ p.ten, p.id ] }, {:include_blank => true}, :class => "span3", :style => "height: 40px;font-size: 24px;", :id => "chon_cau_hoi") %>
       </td>
     </tr>
   </table>
