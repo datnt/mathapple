@@ -1,6 +1,6 @@
 <div class="appInfo">
   <div class="page-header">
-    <h1 id="contact">Tiêu đề  <small><%= @baitap.name %></small></h1>
+    <h1 id="contact" style="font-size: 30px;">Tiêu đề  <%= @baitap.name %></h1>
   </div>
   <div class="alert alert-info">Nội dung: <%= @baitap.description %>
   </div>
@@ -15,7 +15,7 @@
   </div>
   <% @baitap.loai_cau_hois.each do |c| %>
   <div class="page-header">
-    <h4><small><%= c.title %></small></h4>
+    <h4  style="font-size: 30px; line-height: 30px;"><%= c.title %></h4>
 
     
 
@@ -73,7 +73,7 @@ end
 %>
 
 
-    <h4><small><a href="<%= xoa_cau_hoi_bai_taps_path(:id => @baitap.id, :xoa_id => c.id) %>">Xóa câu hỏi</a></small></h4>
+    <h4><a style="font-size: 30px; line-height: 40px;" href="<%= xoa_cau_hoi_bai_taps_path(:id => @baitap.id, :xoa_id => c.id) %>">Xóa câu hỏi</a></h4>
 
 
 
