@@ -1,3 +1,20 @@
+<style  type="text/css">
+  form table{
+    font-size: 30px;
+
+  }
+  form#form_add_mahs input {
+    height: 40px;
+    font-size: 30px;
+    width: 432px;
+  }
+  form#form_newhs input {
+    height: 40px;
+    font-size: 30px;
+    width: 432px;
+  }
+</style>
+
 <div style="margin-top:65px;" class="row">
   <div class="row">
     <div class="span4">
@@ -5,10 +22,10 @@
     </div>
     <div class="span8">
       <div class="row">
-        <h1>Bài khảo sát: <%= @baitap.name %></h1>
+        <h1 style="font-size: 30px;width: 432px;">Bài khảo sát: <%= @baitap.name %></h1>
       </div>
-      <div class="row">
-        Mã thí sinh (nếu đã có):
+      <div class="row"  style="font-size: 30px;width: 432px;">
+        <div style="font-size: 30px;width: 432px; margin-bottom: 15px; margin-top: 15px;">Mã thí sinh (nếu đã có):</div>
 
         <%= form_tag xulymahs_app_managers_path, :remote => false, :id => "form_add_mahs" do %>
           <%= text_field_tag 'mahocsinh', nil, :id => "mahocsinh" %>
@@ -17,16 +34,16 @@
 
       </div>
       <div class="row">
-        Nếu chưa có mã thí sinh, nhập họ và tên để bắt đầu:
 
 
+        <div style="font-size: 30px;width: 432px; margin-bottom: 15px; margin-top: 15px; line-height: 40px;"> Nếu chưa có mã thí sinh, nhập họ và tên để bắt đầu:</div>
 
 
         <%= form_for(@hocsinh, :url => newhs_app_managers_path , :html => {:multipart => false, :id => "form_newhs" }, :method => :post) do |f| %>
 
           <%= f.text_field :mahocsinh, :type => "hidden" %>
 
-          <%= f.label "Họ và Tên" %>
+          <%= f.label "Họ và Tên" ,:style => "font-size: 30px;width: 432px; margin-bottom: 15px;" %>
           <%= f.text_field :ten %>
           <div class="page-header"></div>
           <%= f.submit "Khởi tạo" %>
